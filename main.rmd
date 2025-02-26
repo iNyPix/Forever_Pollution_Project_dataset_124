@@ -254,7 +254,7 @@ substancesFiltered <- substances %>%
         arrange(desc("n()")) %>%
         head(50)
 
-png("./data/wordcloud.png")
+png("./wordcloud.png")
 wordcloud(
         words = substancesFiltered$substance,
         freq = substancesFiltered$`n()`,
@@ -262,5 +262,5 @@ wordcloud(
         random.order=FALSE,
 )
 dev.off()
-knitr::include_graphics("./data/wordcloud.png")
+knitr::include_graphics("./wordcloud.png")
 ```
